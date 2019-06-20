@@ -17,13 +17,14 @@ const DEFAULT_CONFIG: ImageViewerConfig = {
     prev: true
   },
   btnIcons: {
-    zoomIn: 'fa fa-plus',
-    zoomOut: 'fa fa-minus',
-    rotateClockwise: 'fa fa-repeat',
-    rotateCounterClockwise: 'fa fa-undo',
-    next: 'fa fa-arrow-right',
-    prev: 'fa fa-arrow-left',
-    fullscreen: 'fa fa-arrows-alt',
+    zoomIn: 'zoom_in',
+    zoomOut: 'zoom_out',
+    rotateClockwise: 'rotate_right',
+    rotateCounterClockwise: 'rotate_left',
+    next: 'navigate_next',
+    prev: 'navigate_before',
+    fullscreen: 'fullscreen',
+    fullscreenExit: 'fullscreen_exit'
   }
 };
 

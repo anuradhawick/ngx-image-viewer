@@ -18,7 +18,7 @@ export class AppComponent {
   imageIndexOne = 0;
   imageIndexTwo = 0;
 
-  config: ImageViewerConfig = {customBtns: [{name: 'print', icon: 'fa fa-print'}, {name: 'link', icon: 'fa fa-link'}]};
+  config: ImageViewerConfig = {customBtns: [{name: 'print', icon: 'print'}, {name: 'link', icon: 'insert_link'}]};
 
   handleEvent(event: CustomEvent) {
     console.log(`${event.name} has been click on img ${event.imageIndex + 1}`);

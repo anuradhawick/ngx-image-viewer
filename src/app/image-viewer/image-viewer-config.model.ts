@@ -23,6 +23,7 @@ export interface ImageViewerConfig {
         next?: string;
         prev?: string;
         fullscreen?: string;
+        fullscreenExit?: string;
     };
 
     customBtns?: Array<

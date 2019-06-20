@@ -3,10 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ImageViewerComponent } from './image-viewer.component';
 import { ImageViewerConfig } from './image-viewer-config.model';
 import { ToggleFullscreenDirective } from './fullscreen.directive';
+import { MatButtonModule, MatIconModule, MatProgressSpinnerModule } from '@angular/material'
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule,
+    MatIconModule,
+    MatProgressSpinnerModule
   ],
   declarations: [
     ImageViewerComponent,

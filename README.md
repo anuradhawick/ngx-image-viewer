@@ -1,18 +1,15 @@
 # NgxImageViewer
 
-A configurable Angular image viewer component, compatible with Angular 2.x, 4.x and 5.x
+A configurable Angular image viewer component, compatible with Angular 8+
 
 ## Features:
- * Compatible with Angular 2.x, 4.x and 5.x
+ * Compatible with Angular 8+
  * Configurable
  * Rotate image
  * Zoom image
  * Drag to move image
  * Toggle fullscreen mode
-
-## DEMO
-
-https://angular-2wrbwp.stackblitz.io/
+ * Material Icons
 
 ---
 
@@ -45,12 +42,38 @@ By default, the image viewer will fill its container. If you wish to restrict th
 If you want to use the standard icons, you will also need to install `font-awesome`
 
 ```
-npm install --save font-awesome
+npm install --save @angular/material @angular/cdk @angular/animations 
 ```
+The material icons will be used and you need to have angular material installed and imported in your main module.
+```javascript
 
-Otherwise, you will need to use the configuration to set different icon classes.
-
-
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule, // To support animations
+    ImageViewerModule.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+``` 
+This module is built using the following version. Therefore consider updating your angular version to 8+ in order to use.
+```
+"@angular/animations": "^8.0.2",
+"@angular/cdk": "^8.0.1",
+"@angular/material": "^8.0.1"
+```
+Rendering Icons and Ripples require specific css (as you might have already used, But for closure following or later versions should support)
+```html
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://rawgit.com/angular/material2-builds/master/prebuilt-themes/indigo-pink.css" 
+  rel="stylesheet">
+```
 ---
 
 ## Configuration
@@ -67,15 +90,6 @@ The configuration object is structured as below. All values are optional, and if
   wheelZoom: true, // If true, the mouse wheel can be used to zoom in
   allowFullscreen: true, // If true, the fullscreen button will be shown, allowing the user to entr fullscreen mode
   allowKeyboardNavigation: true, // If true, the left / right arrow keys can be used for navigation
-  btnIcons: { // The icon classes that will apply to the buttons. By default, font-awesome is used.
-    zoomIn: 'fa fa-plus',
-    zoomOut: 'fa fa-minus',
-    rotateClockwise: 'fa fa-repeat',
-    rotateCounterClockwise: 'fa fa-undo',
-    next: 'fa fa-arrow-right',
-    prev: 'fa fa-arrow-left',
-    fullscreen: 'fa fa-arrows-alt',
-  },
   btnShow: {
     zoomIn: true,
     zoomOut: true,
@@ -83,6 +97,16 @@ The configuration object is structured as below. All values are optional, and if
     rotateCounterClockwise: true,
     next: true,
     prev: true
+  },
+  btnIcons: { // The icon classes that will apply to the buttons. By default, following material icons are used.
+    zoomIn: 'zoom_in',
+    zoomOut: 'zoom_out',
+    rotateClockwise: 'rotate_right',
+    rotateCounterClockwise: 'rotate_left',
+    next: 'navigate_next',
+    prev: 'navigate_before',
+    fullscreen: 'fullscreen',
+    fullscreenExit: 'fullscreen_exit'
   }
 };
 ```
@@ -91,7 +115,7 @@ To add additional buttons use the following
 
 ```html 
 <ngx-image-viewer [src]="images" 
-                  [config]="{customBtns:[{name: 'link', icon: 'fa fa-paperclip'}]}"
+                  [config]="{customBtns:[{name: 'link', icon: 'material icon name'}]}"
                   (customEvent)="handleEvent($event)">
 </ngx-image-viewer>
 ```
@@ -109,5 +133,3 @@ handleEvent(event: CustomEvent) {
 ```
 
 Note: currently only 3 additional buttons is supported due to css
-
-

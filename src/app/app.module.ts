@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -13,6 +14,7 @@ import { ImageViewerModule } from './image-viewer/image-viewer.module';
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
     ImageViewerModule.forRoot()
   ],
   providers: [],
