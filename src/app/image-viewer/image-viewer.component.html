@@ -33,10 +33,10 @@
   </button>
 
   <div class="nav-button-container" *ngIf="src.length > 1">
-    <button mat-mini-fab [ngClass]="config.btnClass" color="primary" type="button"  (click)="prevImage()" [disabled]="index === 0">
+    <button mat-mini-fab [ngClass]="config.btnClass" color="primary" type="button"  (click)="prevImage($event)" [disabled]="index === 0">
       <mat-icon>{{config.btnIcons.prev}}</mat-icon>
     </button>
-    <button mat-mini-fab [ngClass]="config.btnClass" color="primary" type="button" (click)="nextImage()" [disabled]="index === src.length - 1">
+    <button mat-mini-fab [ngClass]="config.btnClass" color="primary" type="button" (click)="nextImage($event)" [disabled]="index === src.length - 1">
       <mat-icon>{{config.btnIcons.next}}</mat-icon>
     </button>
   </div>

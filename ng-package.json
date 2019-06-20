@@ -1,9 +1,12 @@
 {
-    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-    "lib": {
-      "entryFile": "public_api.ts",
-      "externals": {
-        "screenfull": "screenfull"
-      }
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "whitelistedNonPeerDependencies": [
+    "screenfull"
+  ],
+  "lib": {
+    "entryFile": "public_api.ts",
+    "externals": {
+      "screenfull": "screenfull"
     }
   }
+}
