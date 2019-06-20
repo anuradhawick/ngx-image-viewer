@@ -86,7 +86,7 @@ The configuration object is structured as below. All values are optional, and if
 {
   btnClass: 'default', // The CSS class(es) that will apply to the buttons
   zoomFactor: 0.1, // The amount that the scale will be increased by
-  containerBackgroundColor: '#ccc', // The color to use for the background. This can provided in hex, or rgb(a).
+  containerBackgroundColor: '#000', // The color to use for the background. This can provided in hex, or rgb(a). Default black.
   wheelZoom: true, // If true, the mouse wheel can be used to zoom in
   allowFullscreen: true, // If true, the fullscreen button will be shown, allowing the user to entr fullscreen mode
   allowKeyboardNavigation: true, // If true, the left / right arrow keys can be used for navigation

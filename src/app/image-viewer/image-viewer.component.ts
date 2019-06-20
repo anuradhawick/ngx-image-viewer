@@ -4,7 +4,7 @@ import { ImageViewerConfig, CustomEvent } from './image-viewer-config.model';
 const DEFAULT_CONFIG: ImageViewerConfig = {
   btnClass: 'default',
   zoomFactor: 0.1,
-  containerBackgroundColor: '#ccc',
+  containerBackgroundColor: '#000',
   wheelZoom: false,
   allowFullscreen: true,
   allowKeyboardNavigation: true,
