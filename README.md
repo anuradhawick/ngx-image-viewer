@@ -42,7 +42,7 @@ By default, the image viewer will fill its container. If you wish to restrict th
 If you want to use the standard icons, you will also need to install `font-awesome`
 
 ```
-npm install --save @angular/material @angular/cdk @angular/animations 
+npm install --save @angular/material @angular/cdk @angular/animations screenfull
 ```
 The material icons will be used and you need to have angular material installed and imported in your main module.
 ```javascript
@@ -67,7 +67,10 @@ This module is built using the following version. Therefore consider updating yo
 "@angular/animations": "^8.0.2",
 "@angular/cdk": "^8.0.1",
 "@angular/material": "^8.0.1"
+"screenfull": "^4.2.0"
 ```
+Screenfull will be a peer depdendency as dependency bundling is no longer supported by npm
+
 Rendering Icons and Ripples require specific css (as you might have already used, But for closure following or later versions should support)
 ```html
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
